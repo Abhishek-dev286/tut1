@@ -1,0 +1,67 @@
+<!-- this is a tutorial for design a stylish button with the help of css -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>stylish button</title>
+
+	<style>
+		*{
+         margin: 0;
+		 padding: 0;
+		}
+		body{
+			overflow:hidden;
+		}
+		.container{
+			width: 100vw;
+			height: 100vh;
+			background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+        .heading{
+            border: 2px solid black;
+            background-color: #43dc0b;
+        }
+        h1{
+           font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            
+        }
+        h1:hover{
+            background-color: #634c4c;
+        
+        }
+        h1::before{
+            content: '';
+            width: 100%;
+            height: 40%;
+            position: absolute;
+            background-color: white;
+            top: 0%;
+            left: 0%;
+            transform: translateX(100%)rotate(45deg);
+            transition: all 0.5s;
+        }
+        h1:hover:before{
+            transform: translateX(-100%) rotate(45deg);
+        }
+	</style>
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="heading">
+            <h1> THE Tech show</h1>
+        </div>
+        
+    </div>
+    </body>
+</html>
